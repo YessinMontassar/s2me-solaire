@@ -68,22 +68,24 @@ export function Contact({ prefill }: { prefill: string }) {
             <a href={SITE.phoneHref} className={btn.outline}><Phone className="size-4" aria-hidden /> {SITE.phone}</a>
           </div>
 
-          <address className="mt-10 grid gap-4 not-italic sm:grid-cols-2">
-            {[
-              { icon: MapPin, title: "Adresse", body: <>{SITE.address[0]}<br />{SITE.address[1]}</> },
-              { icon: Mail, title: "E-mail", body: <a className="underline decoration-sun underline-offset-4 hover:text-violet" href={`mailto:${SITE.email}`}>{SITE.email}</a> },
-              { icon: Phone, title: "Téléphone", body: <a className="underline decoration-sun underline-offset-4 hover:text-violet" href={SITE.phoneHref}>{SITE.phone}</a> },
-              { icon: Clock, title: "Horaires", body: SITE.hours },
-            ].map(({ icon: Icon, title, body }) => (
-              <div key={title} className="flex gap-4 rounded-2xl border border-line bg-white p-5">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-violet/10 text-violet"><Icon className="size-5" aria-hidden /></span>
-                <div>
-                  <p className="text-sm font-semibold text-violet">{title}</p>
-                  <div className="mt-0.5 text-ink">{body}</div>
+          <div className="@container mt-10">
+            <address className="grid gap-4 not-italic @sm:grid-cols-2">
+              {[
+                { icon: MapPin, title: "Adresse", body: <>{SITE.address[0]}<br />{SITE.address[1]}</> },
+                { icon: Mail, title: "E-mail", body: <a className="underline decoration-sun underline-offset-4 hover:text-violet" href={`mailto:${SITE.email}`}>{SITE.email}</a> },
+                { icon: Phone, title: "Téléphone", body: <a className="underline decoration-sun underline-offset-4 hover:text-violet" href={SITE.phoneHref}>{SITE.phone}</a> },
+                { icon: Clock, title: "Horaires", body: SITE.hours },
+              ].map(({ icon: Icon, title, body }) => (
+                <div key={title} className="flex gap-4 rounded-2xl border border-line bg-white p-5">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-violet/10 text-violet"><Icon className="size-5" aria-hidden /></span>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-violet">{title}</p>
+                    <div className="mt-0.5 text-ink break-words">{body}</div>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </address>
+              ))}
+            </address>
+          </div>
         </Reveal>
 
         <Reveal delay={0.1}>
