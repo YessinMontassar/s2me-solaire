@@ -150,12 +150,14 @@ export function Simulator({ onRequest }: { onRequest: (message: string) => void 
                     type="button"
                     role="listitem"
                     key={MONTHS[i]}
-                    onPointerEnter={() => setMonth(i)}
-                    onPointerLeave={() => setMonth(null)}
+                    onMouseEnter={() => setMonth(i)}
+                    onMouseLeave={() => setMonth(null)}
                     onFocus={() => setMonth(i)}
                     onBlur={() => setMonth(null)}
+                    onClick={() => setMonth(i)}
                     aria-label={`${MONTHS_FULL[i]} : ${fmtNumber(v)} kWh`}
-                    className="group flex h-full flex-1 cursor-pointer flex-col items-center justify-end gap-1.5 rounded-md"
+                    aria-pressed={i === shown}
+                    className="group flex h-full min-w-0 flex-1 cursor-pointer touch-manipulation flex-col items-center justify-end gap-1.5 rounded-md py-1"
                   >
                     <motion.span
                       className={cn("w-full origin-bottom rounded-t-md transition-colors", i === shown ? "bg-linear-to-t from-sun to-amber" : "bg-violet/25 group-hover:bg-violet/45")}

@@ -38,9 +38,9 @@ export default function App() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Nous écrire sur WhatsApp"
-        className="fixed bottom-5 right-5 z-40 flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_12px_30px_-8px_rgb(37_211_102/.7)] transition-transform hover:scale-105"
+        className="fixed bottom-4 right-4 z-40 flex size-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_12px_30px_-8px_rgb(37_211_102/.7)] transition-transform hover:scale-105 sm:bottom-5 sm:right-5 sm:size-14"
       >
-        <MessageCircle className="size-7" aria-hidden />
+        <MessageCircle className="size-6 sm:size-7" aria-hidden />
       </a>
     </MotionConfig>
   );

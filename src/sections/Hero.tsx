@@ -167,7 +167,8 @@ function LiveCard({ sun }: { sun: ReturnType<typeof sunSnapshot> }) {
   return (
     <motion.aside
       initial={{ opacity: 0, y: 24, scale: 0.97 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.8, delay: 0.6, ease: EASE }}
       className="relative w-full max-w-sm rounded-3xl border border-white/15 bg-white/[.06] p-6 text-white shadow-[0_30px_80px_-30px_rgb(0_0_0/.6)] backdrop-blur-xl"
       aria-labelledby="live-title"
@@ -246,7 +247,8 @@ export function Hero() {
         <div>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, ease: EASE }}
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-lilac backdrop-blur"
           >
@@ -256,7 +258,7 @@ export function Hero() {
 
           <h1 className="text-[clamp(2.5rem,5.6vw,4.6rem)] font-semibold leading-[1.04] tracking-tight">
             {WORDS_1.map((w, i) => (
-              <motion.span key={w} className="mr-[.22em] inline-block" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.07, duration: 0.7, ease: EASE }}>
+              <motion.span key={w} className="mr-[.22em] inline-block" initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 + i * 0.07, duration: 0.7, ease: EASE }}>
                 {w}
               </motion.span>
             ))}
@@ -267,7 +269,8 @@ export function Hero() {
                 key={w}
                 className="mr-[.22em] inline-block bg-linear-to-r from-amber via-sun to-amber bg-clip-text pb-1 text-transparent"
                 initial={{ opacity: 0, y: 28 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.4 + i * 0.07, duration: 0.7, ease: EASE }}
               >
                 {w}
@@ -278,7 +281,8 @@ export function Hero() {
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.7, duration: 0.7, ease: EASE }}
             className="mt-6 max-w-xl text-lg text-lilac sm:text-xl"
           >
@@ -287,7 +291,8 @@ export function Hero() {
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.85, duration: 0.7, ease: EASE }}
             className="mt-9 flex flex-wrap gap-3"
           >
@@ -301,7 +306,8 @@ export function Hero() {
 
           <motion.ul
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 1.1, duration: 0.8 }}
             className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/75"
           >
