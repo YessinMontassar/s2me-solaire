@@ -1,13 +1,14 @@
-// À REMPLACER : coordonnées réelles de S2ME avant la mise en ligne
+// Coordonnées S2ME — téléphone et e-mail confirmés sur leur page Facebook,
+// WhatsApp confirmé par le client (numéro personnel du gérant)
 export const SITE = {
   name: "S2ME",
   legal: "Ste Montassar Énergie",
-  phone: "+216 00 000 000",
-  phoneHref: "tel:+21600000000",
-  whatsapp: "21600000000", // format international sans « + »
-  email: "contact@s2me.tn",
-  address: ["[Rue et numéro]", "[Code postal] [Ville], Tunisie"],
-  hours: "Lundi au samedi, 8h à 17h",
+  phone: "+216 53 107 208",
+  phoneHref: "tel:+21653107208",
+  whatsapp: "21627200480", // format international sans « + » — WhatsApp du gérant
+  email: "omontassar38@gmail.com",
+  address: ["Jbeniana", "3056 Sfax, Tunisie"],
+  hours: "Ouvert en permanence",
 };
 
 export const whatsappLink = (text = "Bonjour S2ME, je souhaite une étude pour une installation solaire.") =>
