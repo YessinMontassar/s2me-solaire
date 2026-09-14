@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
 import { Activity, FileText, Hammer, Landmark, Ruler } from "lucide-react";
+import { Photo } from "@/components/ui/photo";
 import { Reveal, SectionHead } from "@/components/ui/reveal";
 import { btn } from "@/lib/utils";
 
@@ -24,6 +25,18 @@ export function Process() {
           <SectionHead eyebrow="Notre démarche" title="Du premier appel à la mise en service" text="Un seul interlocuteur S2ME vous suit à chaque étape, sans surprise." />
           <Reveal delay={0.1}>
             <a href="#contact" className={`${btn.dark} mt-8`}>Planifier une visite technique</a>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <Photo
+              name="poseTechniciens"
+              className="mt-10 hidden rounded-3xl border border-line aspect-[4/3] lg:block"
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              tint="soft"
+            >
+              <p className="absolute inset-x-5 bottom-4 text-sm font-medium text-white/90">
+                Pose des modules par nos techniciens, en général en une à trois journées.
+              </p>
+            </Photo>
           </Reveal>
         </div>
 

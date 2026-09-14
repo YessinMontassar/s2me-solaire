@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { CircleCheck, Clock, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { Magnetic } from "@/components/ui/magnetic";
+import { Photo } from "@/components/ui/photo";
 import { Reveal } from "@/components/ui/reveal";
 import { ShinyText } from "@/components/ui/shiny-text";
 import { GOUVERNORATS, SITE, whatsappLink } from "@/lib/site";
@@ -86,6 +87,12 @@ export function Contact({ prefill }: { prefill: string }) {
               ))}
             </address>
           </div>
+
+          <Photo
+            name="posePanneauToit"
+            className="mt-6 aspect-[16/9] rounded-2xl border border-line"
+            sizes="(min-width: 1024px) 45vw, 100vw"
+          />
         </Reveal>
 
         <Reveal delay={0.1}>
