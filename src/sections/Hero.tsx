@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { animate, motion, useMotionValue, useReducedMotion, useTransform } from "motion/react";
 import { ArrowRight, FileCheck, MapPin, Moon, Smartphone, Sunrise, Sunset, Wrench } from "lucide-react";
 import { Magnetic } from "@/components/ui/magnetic";
+import { Photo } from "@/components/ui/photo";
 import { EASE } from "@/components/ui/reveal";
 import { fmtTime, sunSnapshot } from "@/lib/sun";
 import { SITE } from "@/lib/site";
@@ -230,8 +231,19 @@ export function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden bg-night text-white">
-      {/* Fond : ciel nuit → indigo, grille de cellules et lueur d'horizon */}
-      <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(120%_80%_at_50%_0%,#3a2aa6_0%,#1a1256_40%,#0f0a33_75%)]" />
+      {/* Fond : dégradé de marque, puis photo réelle d'une toiture solaire au couchant */}
+      <div aria-hidden className="absolute inset-0 -z-20 bg-[radial-gradient(120%_80%_at_50%_0%,#3a2aa6_0%,#1a1256_40%,#0f0a33_75%)]" />
+      <Photo
+        name="heroToit"
+        decorative
+        tint="none"
+        priority
+        sizes="100vw"
+        className="absolute inset-0 -z-20 bg-transparent"
+        imgClassName="object-cover object-center opacity-70 [mask-image:linear-gradient(to_bottom,transparent_0%,rgb(0_0_0/.55)_14%,black_38%,rgb(0_0_0/.5)_68%,transparent_88%)]"
+      />
+      {/* Voile sombre : garantit le contraste du titre et des boutons par-dessus la photo */}
+      <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgb(15_10_51/.9)_0%,rgb(15_10_51/.8)_55%,rgb(15_10_51/.62)_100%)] lg:bg-[linear-gradient(to_right,rgb(15_10_51/.92)_0%,rgb(15_10_51/.74)_38%,rgb(15_10_51/.34)_75%,rgb(15_10_51/.26)_100%)]" />
       <div
         aria-hidden
         className="absolute inset-0 -z-10 opacity-[.18] [background-image:linear-gradient(rgb(255_255_255/.35)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/.35)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]"
