@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Palette tirée du logo S2ME : indigo/violet de la marque, orange et ambre du soleil */
+@theme {
+  --color-night: #0f0a33;
+  --color-indigo: #241a6b;
+  --color-violet: #5a3fd0;
+  --color-lilac: #b3a8f2;
+  --color-sun: #f26a1b;
+  --color-amber: #f5a623;
+  --color-chalk: #f6f5fc;
+  --color-ink: #1d1747;
+  --color-muted: #5b5680;
+  --color-line: #dcd9ee;
+
+  --font-heading: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --animate-marquee: marquee var(--duration, 50s) linear infinite;
+  --animate-spin-slow: spin 30s linear infinite;
+  --animate-pulse-dot: pulse-dot 2s ease-out infinite;
+  --animate-shiny-text: shiny-text 3.2s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - var(--gap))); }
+  }
+  @keyframes pulse-dot {
+    0% { box-shadow: 0 0 0 0 rgb(245 166 35 / 0.6); }
+    100% { box-shadow: 0 0 0 10px rgb(245 166 35 / 0); }
+  }
+  @keyframes shiny-text {
+    0%, 90%, 100% { background-position: calc(-100% - var(--shiny-width)) 0; }
+    30%, 60% { background-position: calc(100% + var(--shiny-width)) 0; }
+  }
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+body {
+  background: var(--color-chalk);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  text-wrap: balance;
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+  letter-spacing: -0.01em;
+}
+p { text-wrap: pretty; }
+
+:focus-visible { outline: 3px solid var(--color-sun); outline-offset: 3px; border-radius: 8px; }
+
+/* Curseur du simulateur */
+input[type="range"].sun-range {
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 2.75rem; background: transparent; cursor: pointer;
+}
+.sun-range::-webkit-slider-runnable-track {
+  height: 8px; border-radius: 8px;
+  background: linear-gradient(90deg, var(--color-amber), var(--color-sun) var(--pct), rgb(255 255 255 / 0.14) var(--pct));
+}
+.sun-range::-moz-range-track { height: 8px; border-radius: 8px; background: rgb(255 255 255 / 0.14); }
+.sun-range::-moz-range-progress { height: 8px; border-radius: 8px; background: linear-gradient(90deg, var(--color-amber), var(--color-sun)); }
+.sun-range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 28px; height: 28px; margin-top: -10px; border-radius: 50%;
+  background: #fff; border: 6px solid var(--color-sun);
+  box-shadow: 0 0 0 6px rgb(242 106 27 / 0.25), 0 6px 18px rgb(0 0 0 / 0.35);
+  transition: box-shadow 0.2s;
+}
+.sun-range:active::-webkit-slider-thumb { box-shadow: 0 0 0 10px rgb(242 106 27 / 0.3), 0 6px 18px rgb(0 0 0 / 0.35); }
+.sun-range::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 6px solid var(--color-sun); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

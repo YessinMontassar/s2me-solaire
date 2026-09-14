@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S2ME — Ste Montassar Énergie | Énergie photovoltaïque en Tunisie</title>
+  <meta name="description" content="S2ME, Ste Montassar Énergie : étude, installation et suivi de panneaux solaires photovoltaïques en Tunisie. Résidentiel, entreprises et pompage solaire agricole.">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#" aria-label="S2ME, accueil">
+        <img src="assets/logo-mark.svg" alt="" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">S2ME</span>
+          <span class="brand-sub">Ste Montassar Énergie</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" class="nav">
+        <a href="#solutions">Solutions</a>
+        <a href="#simulateur">Simulateur</a>
+        <a href="#demarche">Démarche</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-sun btn-small" href="#contact">Demander une étude</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- HERO : trajectoire du soleil en direct au-dessus de Tunis -->
+    <section class="hero">
+      <div class="wrap hero-copy">
+        <h1>L’électricité du soleil tunisien, produite sur votre toit.</h1>
+        <p class="lead">S2ME étudie, installe et entretient des centrales photovoltaïques pour les foyers, les entreprises et les exploitations agricoles, partout en Tunisie. Nous gérons aussi votre dossier STEG et PROSOL.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sun" href="#simulateur">Estimer mon installation</a>
+          <a class="btn btn-ghost" href="tel:+21600000000">Nous appeler</a>
+        </div>
+      </div>
+
+      <figure class="sunpath" aria-labelledby="sun-status">
+        <svg class="sunpath-svg" viewBox="0 0 1200 330" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+          <defs>
+            <mask id="arc-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="330">
+              <path id="arc-reveal" d="M60 310 A540 280 0 0 1 1140 310" fill="none" stroke="#fff" stroke-width="14"/>
+            </mask>
+          </defs>
+          <path class="arc-track" d="M60 310 A540 280 0 0 1 1140 310"/>
+          <path class="arc-done" d="M60 310 A540 280 0 0 1 1140 310" mask="url(#arc-mask)"/>
+          <line class="horizon" x1="0" y1="310" x2="1200" y2="310"/>
+          <g id="sun" class="sun" transform="translate(60 310)">
+            <g class="sun-rays">
+              <path d="M0-30v-14M0 30v14M-30 0h-14M30 0h14M-21-21l-10-10M21-21l10-10M-21 21l-10 10M21 21l10 10"/>
+            </g>
+            <circle r="18"/>
+          </g>
+        </svg>
+        <figcaption class="wrap sunpath-legend">
+          <span id="sunrise">Lever —</span>
+          <span id="sun-status" class="sun-status" aria-live="polite">Calcul de la position du soleil à Tunis…</span>
+          <span id="sunset">Coucher —</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section id="solutions" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Trois façons de produire votre énergie</h2>
+          <p>Chaque installation part d’une visite sur place : orientation, ombrages, état de la toiture ou du terrain, et vos factures des douze derniers mois.</p>
+        </div>
+
+        <div class="solutions">
+          <article class="solution">
+            <h3>Maison</h3>
+            <div>
+              <p>Des panneaux raccordés au réseau STEG. Le jour, vous consommez votre propre électricité ; le surplus est injecté sur le réseau et vient réduire vos prochaines factures.</p>
+              <ul>
+                <li>Installations de 1 à 10 kWc sur toit-terrasse ou toiture inclinée</li>
+                <li>Montage du dossier PROSOL Élec auprès de l’ANME</li>
+                <li>Onduleur connecté pour suivre votre production sur téléphone</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="solution">
+            <h3>Entreprises et industrie</h3>
+            <div>
+              <p>Pour les ateliers, commerces, hôtels et usines qui consomment surtout en journée, au moment où les panneaux produisent le plus.</p>
+              <ul>
+                <li>Centrales en basse et moyenne tension, en toiture ou au sol</li>
+                <li>Étude de rentabilité à partir de vos relevés de consommation</li>
+                <li>Contrat de maintenance et nettoyage périodique des modules</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="solution">
+            <h3>Pompage solaire agricole</h3>
+            <div>
+              <p>Irriguer sans groupe électrogène ni gasoil. La pompe fonctionne directement avec les panneaux, aux heures les plus ensoleillées, là où le réseau n’arrive pas.</p>
+              <ul>
+                <li>Dimensionnement selon la profondeur du puits et le débit voulu</li>
+                <li>Pompes immergées et de surface, variateur solaire</li>
+                <li>Adapté aux oliveraies, maraîchage et élevage</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULATEUR -->
+    <section id="simulateur" class="section section-night">
+      <div class="wrap sim">
+        <div class="sim-intro">
+          <h2>De quelle installation avez-vous besoin ?</h2>
+          <p>La STEG vous facture tous les deux mois. Indiquez le montant habituel de votre facture et nous estimons la puissance adaptée à votre consommation.</p>
+          <p class="sim-note">Hypothèses : prix moyen de 0,30 DT le kWh, 1 600 kWh produits par kWc et par an en Tunisie, panneaux de 550 Wc. La visite technique affine ce dimensionnement.</p>
+        </div>
+
+        <div class="sim-panel">
+          <label for="bill" class="sim-label">Ma facture STEG pour deux mois</label>
+          <output id="bill-out" for="bill" class="sim-bill">250 DT</output>
+          <input id="bill" type="range" min="50" max="1500" step="10" value="250">
+          <div class="sim-scale" aria-hidden="true"><span>50 DT</span><span>1 500 DT</span></div>
+
+          <dl class="sim-results">
+            <div><dt>Puissance conseillée</dt><dd id="r-kwc">—</dd></div>
+            <div><dt>Panneaux</dt><dd id="r-panels">—</dd></div>
+            <div><dt>Surface de toit</dt><dd id="r-area">—</dd></div>
+            <div><dt>Production par an</dt><dd id="r-prod">—</dd></div>
+          </dl>
+          <a class="btn btn-sun btn-block" href="#contact" id="sim-cta">Demander une étude pour cette installation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DÉMARCHE (séquence réelle, d'où la numérotation) -->
+    <section id="demarche" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Du premier appel à la mise en service</h2>
+          <p>Un seul interlocuteur S2ME vous suit à chaque étape.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Visite technique</h3>
+            <p>Nous mesurons votre toit ou votre terrain, relevons les ombrages et analysons vos factures.</p>
+          </li>
+          <li>
+            <h3>Étude et devis</h3>
+            <p>Vous recevez un dimensionnement détaillé, la production estimée et un devis poste par poste.</p>
+          </li>
+          <li>
+            <h3>Dossiers STEG et ANME</h3>
+            <p>Nous déposons la demande de raccordement et, si vous y avez droit, le dossier de subvention PROSOL.</p>
+          </li>
+          <li>
+            <h3>Installation</h3>
+            <p>Pose des structures, des panneaux et de l’onduleur par nos techniciens, en général en une à trois journées.</p>
+          </li>
+          <li>
+            <h3>Mise en service et suivi</h3>
+            <p>Après le passage de la STEG, nous activons le suivi de production et restons joignables pour l’entretien.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-contact">
+      <div class="wrap contact">
+        <div class="contact-info">
+          <h2>Parlons de votre projet</h2>
+          <p>Décrivez-nous votre besoin : nous vous rappelons pour fixer une visite technique.</p>
+
+          <!-- À REMPLACER : adresse, téléphone, e-mail et horaires réels -->
+          <address>
+            <div>
+              <h3>Adresse</h3>
+              <p>[Rue et numéro]<br>[Code postal] [Ville], Tunisie</p>
+            </div>
+            <div>
+              <h3>Téléphone</h3>
+              <p><a href="tel:+21600000000">+216 00 000 000</a></p>
+            </div>
+            <div>
+              <h3>E-mail</h3>
+              <p><a href="mailto:contact@s2me.tn">contact@s2me.tn</a></p>
+            </div>
+            <div>
+              <h3>Horaires</h3>
+              <p>Lundi au samedi, 8h à 17h</p>
+            </div>
+          </address>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-email="contact@s2me.tn" novalidate>
+          <div class="field">
+            <label for="f-name">Nom et prénom</label>
+            <input id="f-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Téléphone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+216" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-gov">Gouvernorat</label>
+              <select id="f-gov" name="gouvernorat" required>
+                <option value="">Choisir</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-type">Type de projet</label>
+              <select id="f-type" name="type">
+                <option>Maison</option>
+                <option>Entreprise ou industrie</option>
+                <option>Pompage solaire agricole</option>
+                <option>Entretien d’une installation existante</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-msg">Votre message <span class="optional">(facultatif)</span></label>
+            <textarea id="f-msg" name="message" rows="4"></textarea>
+          </div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="btn btn-sun" type="submit">Envoyer la demande</button>
+          <p class="form-done" id="form-done" role="status" hidden>Demande préparée dans votre messagerie. Envoyez l’e-mail pour nous la transmettre.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="brand brand-footer">
+        <img src="assets/logo-mark.svg" alt="" width="32" height="32">
+        <span class="brand-text">
+          <span class="brand-name">S2ME</span>
+          <span class="brand-sub">Énergie photovoltaïque</span>
+        </span>
+      </div>
+      <p>© <span id="year">2026</span> Ste Montassar Énergie. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
